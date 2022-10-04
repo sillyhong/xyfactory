@@ -1,0 +1,11 @@
+.iconbox {
+    width: 60px;
+    height: 60px;
+    
+}
+
+.iconbox .icon  {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
