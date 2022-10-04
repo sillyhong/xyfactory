@@ -1,0 +1,21 @@
+/* tsconfig.server.json */
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "module": "CommonJS",
+      "noEmit": false,
+      "baseUrl": "./",
+    "paths": {
+      "@image/*": [
+        "pages/assets/images/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+
+    } ,
+    },
+    "include": [
+      "src"
+    ]
+  }
