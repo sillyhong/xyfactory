@@ -39,9 +39,9 @@ function FooterComp() {
             <div className="col-6 col-md">
               <h5 className="mb-4 text-white">Contact Us</h5>
               <ul className="list-unstyled text-small">
-                {ContactUs.map((item) => {
+                {ContactUs.map((item, index) => {
                   return (
-                    <li key={item.label}>
+                    <li key={item.label + index}>
                       <a className="text-muted" href="#">
                         {item.label}
                       </a>
@@ -53,9 +53,9 @@ function FooterComp() {
             <div className="col-6 col-md">
               <h5 className="mb-4 text-white">Product Categories</h5>
               <ul className="list-unstyled text-small">
-                {ProductCategories.map((item) => {
+                {ProductCategories.map((item, index) => {
                   return (
-                    <li key={item.label}>
+                    <li key={item.label + index}>
                       <a className="text-muted" href="#">
                         {item.label}
                       </a>

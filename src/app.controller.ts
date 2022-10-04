@@ -6,9 +6,31 @@ import { Request, Response } from 'express';
 export class AppController {
   constructor(private readonly next: NextService) {}
 
-  @Get()
-  getHello(@Req() req: Request, @Res() res: Response) {
+  @Get('about-us')
+  getAboutUs(@Req() req: Request, @Res() res: Response) {
+    console.log('req123 about-us', req.url);
     // 把原本由Nest处理的主页转交给next
-    return this.next.render('/index', req, res);
+    return this.next.render('/AboutUs', req, res);
+  }
+
+  @Get('contact-us')
+  getContactUs(@Req() req: Request, @Res() res: Response) {
+    console.log('req123 about-us', req.url);
+    // 把原本由Nest处理的主页转交给next
+    return this.next.render('/ContactUs', req, res);
+  }
+
+  @Get('product')
+  getProduct(@Req() req: Request, @Res() res: Response) {
+    console.log('req123 product', req.url);
+    // 把原本由Nest处理的主页转交给next
+    return this.next.render('/Product', req, res);
+  }
+
+  @Get()
+  getHome(@Req() req: Request, @Res() res: Response) {
+    console.log('req123 home', req.url);
+    // 把原本由Nest处理的主页转交给next
+    return this.next.render('/Home', req, res);
   }
 }

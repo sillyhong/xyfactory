@@ -13,7 +13,7 @@ function Navigator() {
   return (
     <Navbar bg="primary" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="/">
           <div className={styles.logo}>
             <Image src={Logo} width={100} height={100} />
             XYHardWareFactory
@@ -22,7 +22,7 @@ function Navigator() {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
-            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
             {/* <Nav.Link href="#action2">Products</Nav.Link> */}
             <NavDropdown title="Products" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Shower Hinge</NavDropdown.Item>
@@ -32,12 +32,8 @@ function Navigator() {
                 Something else here
               </NavDropdown.Item> */}
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              About Us
-            </Nav.Link>
-            <Nav.Link href="#" disabled>
-              Contact Us
-            </Nav.Link>
+            <Nav.Link href="/about-us">About Us</Nav.Link>
+            <Nav.Link href="/contact-us">Contact Us</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

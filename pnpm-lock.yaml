@@ -26,6 +26,8 @@ specifiers:
   react: ^18.2.0
   react-bootstrap: ^2.5.0
   react-dom: ^18.2.0
+  react-router-bootstrap: ^0.25.0
+  react-router-dom: '5.2'
   reflect-metadata: ^0.1.13
   rimraf: ^3.0.2
   run-script-webpack-plugin: ^0.1.1
@@ -43,6 +45,9 @@ specifiers:
   webpack-node-externals: ^3.0.0
 
 dependencies:
+  '@fortawesome/fontawesome-svg-core': 6.2.0
+  '@fortawesome/free-solid-svg-icons': 6.2.0
+  '@fortawesome/react-fontawesome': 0.2.0_6j2wdqxompc6mcokhxkpep2gqu
   '@nestjs/common': 9.1.2_yzt46al3aifnexifjjdb4dxxja
   '@nestjs/core': 9.1.2_zzb753o6ov5n3wrhompfrkwa7u
   '@nestjs/platform-express': 9.1.2_umdjpi6fqr4wvw73r3mhthbyle
@@ -54,6 +59,8 @@ dependencies:
   react: 18.2.0
   react-bootstrap: 2.5.0_rj7ozvcq3uehdlnj3cbwzbi5ce
   react-dom: 18.2.0_react@18.2.0
+  react-router-bootstrap: 0.25.0_rywlmbbpgkrpkjsgwzpm4dj6he
+  react-router-dom: 5.2.1_react@18.2.0
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
   run-script-webpack-plugin: 0.1.1
@@ -561,6 +568,39 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@fortawesome/fontawesome-common-types/6.2.0:
+    resolution: {integrity: sha512-rBevIsj2nclStJ7AxTdfsa3ovHb1H+qApwrxcTVo+NNdeJiB9V75hsKfrkG5AwNcRUNxrPPiScGYCNmLMoh8pg==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
+
+  /@fortawesome/fontawesome-svg-core/6.2.0:
+    resolution: {integrity: sha512-Cf2mAAeMWFMzpLC7Y9H1I4o3wEU+XovVJhTiNG8ZNgSQj53yl7OCJaS80K4YjrABWZzbAHVaoHE1dVJ27AAYXw==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.2.0
+    dev: false
+
+  /@fortawesome/free-solid-svg-icons/6.2.0:
+    resolution: {integrity: sha512-UjCILHIQ4I8cN46EiQn0CZL/h8AwCGgR//1c4R96Q5viSRwuKVo0NdQEc4bm+69ZwC0dUvjbDqAHF1RR5FA3XA==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.2.0
+    dev: false
+
+  /@fortawesome/react-fontawesome/0.2.0_6j2wdqxompc6mcokhxkpep2gqu:
+    resolution: {integrity: sha512-uHg75Rb/XORTtVt7OS9WoK8uM276Ufi7gCzshVWkUJbHhh3svsUUeqXerrM96Wm7fRiDzfKRwSoahhMIkGAYHw==}
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ~1 || ~6
+      react: '>=16.3'
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.2.0
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
 
   /@humanwhocodes/config-array/0.10.7:
     resolution: {integrity: sha512-MDl6D6sBsaV452/QSdX+4CXIjZhIcI0PELsxUjk4U828yd58vk3bTIvk/6w5FY+4hIy9sLW0sfrV7K7Kc++j/w==}
@@ -3025,6 +3065,23 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /history/4.10.1:
+    resolution: {integrity: sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew==}
+    dependencies:
+      '@babel/runtime': 7.19.0
+      loose-envify: 1.4.0
+      resolve-pathname: 3.0.0
+      tiny-invariant: 1.3.1
+      tiny-warning: 1.0.3
+      value-equal: 1.0.1
+    dev: false
+
+  /hoist-non-react-statics/3.3.2:
+    resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
+    dependencies:
+      react-is: 16.13.1
+    dev: false
+
   /html-escaper/2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
     dev: true
@@ -3212,6 +3269,10 @@ packages:
     resolution: {integrity: sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==}
     engines: {node: '>=10'}
     dev: true
+
+  /isarray/0.0.1:
+    resolution: {integrity: sha512-D2S+3GLxWH+uhrNEcoh/fnmYeP8E8/zHl644d/jdA0g2uyXvy3sb0qxotE+ne0LtccHknQzWwZEzhak7oJ0COQ==}
+    dev: false
 
   /isarray/1.0.0:
     resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==}
@@ -3917,6 +3978,19 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /mini-create-react-context/0.4.1_sh5qlbywuemxd2y3xkrw2y2kr4:
+    resolution: {integrity: sha512-YWCYEmd5CQeHGSAKrYvXgmzzkrvssZcuuQDDeqkT+PziKGMgE+0MCCtcKbROzocGBG1meBLl2FotlRwf4gAzbQ==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    peerDependencies:
+      prop-types: ^15.0.0
+      react: ^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+    dependencies:
+      '@babel/runtime': 7.19.0
+      prop-types: 15.8.1
+      react: 18.2.0
+      tiny-warning: 1.0.3
+    dev: false
+
   /minimatch/3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
     dependencies:
@@ -4202,6 +4276,12 @@ packages:
   /path-to-regexp/0.1.7:
     resolution: {integrity: sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==}
 
+  /path-to-regexp/1.8.0:
+    resolution: {integrity: sha512-n43JRhlUKUAlibEJhPeir1ncUID16QnEjNpwzNdO3Lm4ywrBpBZ5oLD0I6br9evr1Y9JTqwRtAh7JLoOzAQdVA==}
+    dependencies:
+      isarray: 0.0.1
+    dev: false
+
   /path-to-regexp/3.2.0:
     resolution: {integrity: sha512-jczvQbCUS7XmS7o+y1aEO9OBVFeZBQ1MDSEqmO7xSoPgOPoowY/SxLpZ6Vh97/8qHZOteiCKb7gkG9gA2ZUxJA==}
 
@@ -4411,6 +4491,50 @@ packages:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
     dev: false
 
+  /react-router-bootstrap/0.25.0_rywlmbbpgkrpkjsgwzpm4dj6he:
+    resolution: {integrity: sha512-/22eqxjn6Zv5fvY2rZHn57SKmjmJfK7xzJ6/G1OgxAjLtKVfWgV5sn41W2yiqzbtV5eE4/i4LeDLBGYTqx7jbA==}
+    peerDependencies:
+      react: '>=0.14.0'
+      react-router-dom: '>=4.0.0'
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-router-dom: 5.2.1_react@18.2.0
+    dev: false
+
+  /react-router-dom/5.2.1_react@18.2.0:
+    resolution: {integrity: sha512-xhFFkBGVcIVPbWM2KEYzED+nuHQPmulVa7sqIs3ESxzYd1pYg8N8rxPnQ4T2o1zu/2QeDUWcaqST131SO1LR3w==}
+    peerDependencies:
+      react: '>=15'
+    dependencies:
+      '@babel/runtime': 7.19.0
+      history: 4.10.1
+      loose-envify: 1.4.0
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-router: 5.2.1_react@18.2.0
+      tiny-invariant: 1.3.1
+      tiny-warning: 1.0.3
+    dev: false
+
+  /react-router/5.2.1_react@18.2.0:
+    resolution: {integrity: sha512-lIboRiOtDLFdg1VTemMwud9vRVuOCZmUIT/7lUoZiSpPODiiH1UQlfXy+vPLC/7IWdFYnhRwAyNqA/+I7wnvKQ==}
+    peerDependencies:
+      react: '>=15'
+    dependencies:
+      '@babel/runtime': 7.19.0
+      history: 4.10.1
+      hoist-non-react-statics: 3.3.2
+      loose-envify: 1.4.0
+      mini-create-react-context: 0.4.1_sh5qlbywuemxd2y3xkrw2y2kr4
+      path-to-regexp: 1.8.0
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-is: 16.13.1
+      tiny-invariant: 1.3.1
+      tiny-warning: 1.0.3
+    dev: false
+
   /react-transition-group/4.4.5_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==}
     peerDependencies:
@@ -4517,6 +4641,10 @@ packages:
   /resolve-from/5.0.0:
     resolution: {integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==}
     engines: {node: '>=8'}
+
+  /resolve-pathname/3.0.0:
+    resolution: {integrity: sha512-C7rARubxI8bXFNB/hqcp/4iUeIXJhJZvFPFPiSPRnhU5UPxzMFIl+2E6yY6c4k9giDJAhtV+enfA+G89N6Csng==}
+    dev: false
 
   /resolve.exports/1.1.0:
     resolution: {integrity: sha512-J1l+Zxxp4XK3LUDZ9m60LRJF/mAe4z6a4xyabPHk7pvK5t35dACV32iIjJDFeWZFfZlO29w6SZ67knR0tHzJtQ==}
@@ -4958,6 +5086,14 @@ packages:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
     dev: true
 
+  /tiny-invariant/1.3.1:
+    resolution: {integrity: sha512-AD5ih2NlSssTCwsMznbvwMZpJ1cbhkGd2uueNxzv2jDlEeZdU04JQfRnggJQ8DrcVBGjAsCKwFBbDlVNtEMlzw==}
+    dev: false
+
+  /tiny-warning/1.0.3:
+    resolution: {integrity: sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==}
+    dev: false
+
   /tmp/0.0.33:
     resolution: {integrity: sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==}
     engines: {node: '>=0.6.0'}
@@ -5250,6 +5386,10 @@ packages:
       '@types/istanbul-lib-coverage': 2.0.4
       convert-source-map: 1.8.0
     dev: true
+
+  /value-equal/1.0.1:
+    resolution: {integrity: sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw==}
+    dev: false
 
   /vary/1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
